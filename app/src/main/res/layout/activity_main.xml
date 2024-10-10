@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+     xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:app="http://schemas.android.com/apk/res-auto"
+     android:layout_height="match_parent"
+     android:layout_width="match_parent"
+     android:background="?attr/colorSurfaceContainer"
+     android:fitsSystemWindows="true">
+
+    <com.google.android.material.appbar.AppBarLayout
+         android:layout_height="wrap_content"
+         android:layout_width="match_parent"
+         android:background="?attr/colorSurfaceContainer"
+         app:titleTextAppearance="@style/TextAppearance.Widget.Event.Toolbar.Title"
+         android:fitsSystemWindows="true">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+             android:layout_height="179dp"
+             android:layout_width="match_parent"
+             app:contentScrim="?attr/colorSurfaceContainer"
+             app:expandedTitleTextAppearance="@style/Theme.Apw.ToolbarExpanded"
+             app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
+             android:elevation="0dp"
+             app:collapsedTitleTextAppearance="@style/Theme.Apw.ToolbarCollapsed"
+             app:expandedTitleGravity="left|bottom"
+             style="?attr/collapsingToolbarLayoutLargeStyle"
+             app:titleCollapseMode="scale"
+             app:expandedTitleMarginBottom="25dp"
+             app:statusBarScrim="?attr/colorSurfaceContainer">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                 android:layout_height="?attr/actionBarSize"
+                 android:layout_width="match_parent"
+                 app:title="Contacts"
+                 android:elevation="0dp"
+                 app:layout_collapseMode="pin"
+                 android:id="@+id/toolbar" />
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+         android:layout_height="match_parent"
+         android:layout_width="match_parent"
+        android:id="@+id/scroll"
+         app:layout_behavior="@string/appbar_scrolling_view_behavior"
+         android:background="@drawable/adapter_back">
+
+        <LinearLayout
+             android:layout_height="match_parent"
+             android:layout_width="match_parent"
+             android:padding="10dp"
+             android:orientation="vertical">
+
+            <org.codeaurora.contacts.ApwSearch
+                 android:layout_height="wrap_content"
+                 android:layout_width="match_parent"
+                 android:id="@+id/search" />
+
+            <com.google.android.material.progressindicator.LinearProgressIndicator
+                 android:layout_height="wrap_content"
+                 android:layout_width="match_parent"
+                 android:indeterminate="true"
+                 android:layout_margin="10dp"
+                 android:id="@+id/progress" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                 android:layout_height="match_parent"
+                 android:layout_width="match_parent"
+                 android:id="@+id/recycler_view" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+         android:layout_height="wrap_content"
+         android:layout_width="wrap_content"
+         app:icon="@drawable/add"
+         android:contentDescription="new contact"
+         android:layout_margin="16dp"
+         android:id="@+id/fab"
+         android:layout_gravity="bottom|end"
+         android:text="Create New" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

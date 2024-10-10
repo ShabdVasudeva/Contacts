@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+     xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:app="http://schemas.android.com/apk/res-auto"
+     android:layout_height="wrap_content"
+     android:layout_width="match_parent"
+     android:id="@+id/coordinator">
+
+    <LinearLayout
+         android:layout_height="match_parent"
+         android:layout_width="match_parent"
+         android:elevation="8dp"
+         android:orientation="horizontal">
+
+        <LinearLayout
+             android:layout_height="wrap_content"
+             android:layout_width="0dp"
+             android:gravity="center"
+             android:padding="16dp"
+             android:id="@+id/call"
+             android:foreground="?android:attr/selectableItemBackground"
+             android:orientation="vertical"
+             android:layout_weight="1">
+
+            <ImageView
+                 android:layout_height="wrap_content"
+                 android:layout_width="wrap_content"
+                 android:src="@drawable/call" />
+
+            <TextView
+                 android:layout_height="wrap_content"
+                 android:layout_width="wrap_content"
+                 android:text="call" />
+
+        </LinearLayout>
+
+        <LinearLayout
+             android:layout_height="wrap_content"
+             android:layout_width="0dp"
+             android:gravity="center"
+             android:padding="16dp"
+             android:id="@+id/text"
+             android:foreground="?android:attr/selectableItemBackground"
+             android:orientation="vertical"
+             android:layout_weight="1">
+
+            <ImageView
+                 android:layout_height="wrap_content"
+                 android:layout_width="wrap_content"
+                 android:src="@drawable/text" />
+
+            <TextView
+                 android:layout_height="wrap_content"
+                 android:layout_width="wrap_content"
+                 android:text="text" />
+
+        </LinearLayout>
+
+        <LinearLayout
+             android:layout_height="wrap_content"
+             android:layout_width="0dp"
+             android:gravity="center"
+             android:padding="16dp"
+             android:id="@+id/video"
+             android:foreground="?android:attr/selectableItemBackground"
+             android:orientation="vertical"
+             android:layout_weight="1">
+
+            <ImageView
+                 android:layout_height="wrap_content"
+                 android:layout_width="wrap_content"
+                 android:src="@drawable/wap" />
+
+            <TextView
+                 android:layout_height="wrap_content"
+                 android:layout_width="wrap_content"
+                 android:text="whatsapp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

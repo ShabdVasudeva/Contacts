@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+     xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:app="http://schemas.android.com/apk/res-auto"
+     android:layout_height="match_parent"
+     android:layout_width="match_parent"
+     android:background="?attr/colorSurface"
+     android:id="@+id/coordinator">
+
+    <com.google.android.material.appbar.AppBarLayout
+         android:layout_height="wrap_content"
+         android:layout_width="match_parent"
+         android:background="?attr/colorSurface"
+         app:titleTextAppearance="@style/TextAppearance.Widget.Event.Toolbar.Title"
+         android:fitsSystemWindows="true">
+
+        <com.google.android.material.appbar.MaterialToolbar
+             android:layout_height="?attr/actionBarSize"
+             android:layout_width="match_parent"
+             android:elevation="0dp"
+             app:title=""
+             app:layout_collapseMode="pin"
+             app:navigationIcon="@drawable/back"
+             android:id="@+id/toolbar" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+         android:layout_height="match_parent"
+         android:layout_width="match_parent"
+         app:layout_behavior="@string/appbar_scrolling_view_behavior"
+         android:background="@drawable/adapter_back"
+         android:id="@+id/scroll">
+
+        <LinearLayout
+             android:layout_height="match_parent"
+             android:layout_width="match_parent"
+             android:orientation="vertical">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                 android:layout_height="200dp"
+                 android:layout_width="200dp"
+                 android:scaleType="centerCrop"
+                 android:background="?attr/colorSurfaceContainer"
+                 app:shapeAppearanceOverlay="@style/RoundedImage"
+                 android:id="@+id/photo"
+                 android:layout_gravity="center" />
+
+            <TextView
+                 android:layout_height="wrap_content"
+                 android:layout_width="match_parent"
+                 android:gravity="center"
+                 android:textSize="25.5sp"
+                 android:fontFamily="sans-serif"
+                 android:layout_marginTop="5.5dp"
+                 android:textStyle="normal"
+                 android:id="@+id/name" />
+
+            <org.codeaurora.contacts.ButtonsBunch
+                 android:layout_height="wrap_content"
+                 android:layout_width="match_parent"
+                 android:layout_margin="10dp"
+                 android:id="@+id/bunch" />
+
+            <org.codeaurora.contacts.ContactInfoCard 
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_margin="10dp"
+                android:id="@+id/info_card"/>
+            
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <org.codeaurora.contacts.ApwBottomNavigation
+         android:layout_height="wrap_content"
+         android:layout_width="match_parent"
+         android:gravity="bottom"
+         android:layout_gravity="bottom"
+         android:id="@+id/bottom_navigation" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

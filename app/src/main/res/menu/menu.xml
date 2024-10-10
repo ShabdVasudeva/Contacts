@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/settings"
+        android:showAsAction="never"
+        android:name="Settings"
+        android:title="Settings" />
+    
+    <item
+        android:id="@+id/refresh"
+        android:icon="@drawable/restart"
+        android:showAsAction="always"
+        android:name="Refresh"
+        android:title="Refresh" />
+
+</menu>

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+     xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:app="http://schemas.android.com/apk/res-auto"
+     android:layout_height="wrap_content"
+     android:layout_width="match_parent"
+     app:cardBackgroundColor="?attr/colorSurfaceContainer"
+     style="?attr/materialCardViewFilledStyle"
+     android:outlineProvider="none"
+     android:id="@+id/coordinator">
+
+    <LinearLayout
+         android:layout_height="match_parent"
+         android:layout_width="match_parent"
+         android:elevation="8dp"
+         android:orientation="vertical">
+
+        <TextView
+             android:layout_height="wrap_content"
+             android:layout_width="match_parent"
+             android:layout_marginLeft="10dp"
+             android:layout_marginTop="10dp"
+             android:text="Contact info"
+             android:textStyle="bold"
+             android:layout_gravity="left" />
+
+        <LinearLayout
+             android:layout_height="match_parent"
+             android:layout_width="match_parent"
+             android:padding="10dp"
+             android:orientation="horizontal"
+             android:foreground="?android:attr/selectableItemBackground"
+             android:id="@+id/phoneNumber">
+
+            <LinearLayout
+                 android:layout_height="match_parent"
+                 android:layout_width="0dp"
+                 android:orientation="horizontal"
+                 android:layout_weight="1">
+
+                <ImageView
+                     android:layout_height="wrap_content"
+                     android:layout_width="wrap_content"
+                     android:src="@drawable/call"
+                     android:layout_gravity="center" />
+
+                <LinearLayout
+                     android:layout_height="match_parent"
+                     android:layout_width="wrap_content"
+                     android:gravity="center"
+                     android:orientation="vertical"
+                     android:layout_marginLeft="10dp"
+                     android:layout_gravity="center">
+
+                    <TextView
+                         android:layout_height="wrap_content"
+                         android:layout_width="match_parent"
+                         android:id="@+id/number" />
+
+                    <TextView
+                         android:layout_height="wrap_content"
+                         android:layout_width="match_parent"
+                         android:text="Mobile • Default" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                 android:layout_height="match_parent"
+                 android:layout_width="wrap_content"
+                 android:orientation="horizontal"
+                 android:layout_gravity="center">
+
+                <com.google.android.material.button.MaterialButton
+                     android:layout_height="wrap_content"
+                     android:layout_width="48dp"
+                     app:icon="@drawable/wap"
+                     android:padding="0dp"
+                     app:iconPadding="0dp"
+                     style="?attr/materialIconButtonStyle"
+                     android:layout_weight="1"
+                     android:id="@+id/wap"
+                     app:iconGravity="textStart" />
+
+                <com.google.android.material.button.MaterialButton
+                     android:layout_height="wrap_content"
+                     android:layout_width="48dp"
+                     app:icon="@drawable/text"
+                     android:padding="0dp"
+                     app:iconPadding="0dp"
+                     style="?attr/materialIconButtonStyle"
+                     android:layout_weight="1"
+                     android:id="@+id/txt"
+                     app:iconGravity="textStart" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+             android:layout_height="match_parent"
+             android:layout_width="match_parent"
+             android:padding="10dp"
+             android:orientation="horizontal"
+             android:foreground="?android:attr/selectableItemBackground">
+
+            <LinearLayout
+                 android:layout_height="match_parent"
+                 android:layout_width="0dp"
+                 android:orientation="horizontal"
+                 android:layout_weight="1">
+
+                <ImageView
+                     android:layout_height="wrap_content"
+                     android:layout_width="wrap_content"
+                     android:src="@drawable/mail"
+                     android:layout_gravity="center" />
+
+                <LinearLayout
+                     android:layout_height="match_parent"
+                     android:layout_width="wrap_content"
+                     android:gravity="center"
+                     android:orientation="vertical"
+                     android:layout_marginLeft="10dp"
+                     android:layout_gravity="center">
+
+                    <TextView
+                         android:layout_height="wrap_content"
+                         android:layout_width="match_parent"
+                         android:id="@+id/mailText" />
+
+                    <TextView
+                         android:layout_height="wrap_content"
+                         android:layout_width="match_parent"
+                         android:text="Email • Default" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton
+                 android:layout_height="wrap_content"
+                 android:layout_width="48dp"
+                 app:icon="@drawable/email"
+                 android:padding="0dp"
+                 app:iconPadding="0dp"
+                 style="?attr/materialIconButtonStyle"
+                 android:id="@+id/email"
+                 app:iconGravity="textStart" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

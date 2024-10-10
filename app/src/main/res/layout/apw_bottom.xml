@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+     xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:app="http://schemas.android.com/apk/res-auto"
+     android:layout_height="wrap_content"
+     android:layout_width="match_parent"
+     android:background="?attr/colorSurfaceContainer"
+     android:elevation="8dp"
+     android:padding="8dp"
+     android:orientation="horizontal"
+     android:id="@+id/coordinator">
+
+    <LinearLayout
+         android:layout_height="wrap_content"
+         android:layout_width="0dp"
+         android:orientation="horizontal"
+         android:layout_weight="1">
+
+        <com.google.android.material.button.MaterialButton
+             android:layout_height="wrap_content"
+             android:layout_width="0dp"
+             app:icon="@drawable/edit"
+             android:contentDescription="edit"
+             android:padding="0dp"
+             style="?attr/materialIconButtonStyle"
+             app:iconPadding="0dp"
+             android:layout_weight="1"
+             app:iconGravity="textStart"
+             android:id="@+id/edit" />
+
+        <com.google.android.material.button.MaterialButton
+             android:layout_height="wrap_content"
+             android:layout_width="0dp"
+             app:icon="@drawable/share"
+             android:contentDescription="share"
+             android:padding="0dp"
+             app:iconPadding="0dp"
+             style="?attr/materialIconButtonStyle"
+             android:layout_weight="1"
+             app:iconGravity="textStart"
+             android:id="@+id/share" />
+
+    </LinearLayout>
+
+    <LinearLayout
+         android:layout_height="wrap_content"
+         android:layout_width="0dp"
+         android:orientation="horizontal"
+         android:layout_weight="1">
+
+        <com.google.android.material.button.MaterialButton
+             android:layout_height="wrap_content"
+             android:layout_width="0dp"
+             android:contentDescription="favourites"
+             android:padding="0dp"
+             app:iconPadding="0dp"
+             style="?attr/materialIconButtonStyle"
+             android:layout_weight="1"
+             app:iconGravity="textStart"
+             android:id="@+id/fav" />
+
+        <com.google.android.material.button.MaterialButton
+             android:layout_height="wrap_content"
+             android:layout_width="0dp"
+             app:icon="@drawable/email"
+             android:contentDescription="email"
+             android:padding="0dp"
+             app:iconPadding="0dp"
+             style="?attr/materialIconButtonStyle"
+             android:layout_weight="1"
+             app:iconGravity="textStart"
+             android:id="@+id/email" />
+
+    </LinearLayout>
+
+</LinearLayout>
